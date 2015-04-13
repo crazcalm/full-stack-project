@@ -13,7 +13,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #config.vm.box = "ubuntu/trusty32"
 
   config.vm.define "dev", primary: true do |dev|
+    # Select a box
     dev.vm.box = "ubuntu/trusty32"
+
+    # Provisioning script
+    dev.vm.provision "shell", path: "Provision/dev.sh"
   end
 
   # Disable automatic box update checking. If you disable this, then
