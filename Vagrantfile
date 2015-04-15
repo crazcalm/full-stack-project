@@ -17,7 +17,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     dev.vm.box = "ubuntu/trusty32"
 
     # Port forwarding
-    dev.vm.network "forwarded_port", guest:80, host:8888, auto_correct: true
+    dev.vm.network "forwarded_port", guest:8000, host:8888, auto_correct: true
+
+    # Public network
+    #dev.vm.network "private_network", ip: "192.168.33.10"
 
     # Provisioning script
     dev.vm.provision "shell", path: "Provision/dev.sh"
