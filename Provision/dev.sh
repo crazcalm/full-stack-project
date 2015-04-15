@@ -20,6 +20,8 @@ apt-get install -y tree
 # App requirments.txt installs
 python3 -m pip install -r /vagrant/app/requirements.txt
 
+# I can only run the below commands once
+# I need to externalize this.
 # Ngnix python setup
 #/etc/init.d/nginx start
 #rm /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.copy
