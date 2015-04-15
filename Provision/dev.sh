@@ -22,7 +22,7 @@ python3 -m pip install -r /vagrant/app/requirements.txt
 
 # Ngnix python setup
 #/etc/init.d/nginx start
-#mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.copy
+#rm /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.copy
 #echo "$(cat /vagrant/Provision/nginx/flask_project)" > /etc/nginx/sites-available/flask_project
 #ln -s /etc/nginx/sites-available/flask_project /etc/nginx/sites-enabled/flask_project
 #/etc/init.d/nginx restart  # Restarting nginx
