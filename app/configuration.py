@@ -20,7 +20,7 @@ class StagingConfig(BaseConfig):
     """
     Staging specific config
     """
-    pass
+    DEBUG = True
 
 
 class DevelopmentConfig(BaseConfig):
