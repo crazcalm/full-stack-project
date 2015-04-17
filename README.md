@@ -9,6 +9,9 @@ I would like to try my hand at creating a professional piece of work.
 * Run App
     * python3 run.py -h (Command line interface)
 
+* Run Tests
+    * (From the app directory run) python3 -m unittest discover -v tests/
+
 
 ##Helpful blog posts!
 * https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/
