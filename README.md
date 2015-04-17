@@ -7,7 +7,7 @@ I would like to try my hand at creating a professional piece of work.
 
 ##Useful commands
 * Run App
-    * gunicorn app:app -b localhost:5000    
+    * python3 run.py -h (Command line interface)
 
 
 ##Helpful blog posts!
@@ -15,4 +15,4 @@ I would like to try my hand at creating a professional piece of work.
 
 ##Stack Overflow FTW
 * Nginx
-    * http://stackoverflow.com/questions/17859653/nginx-not-running-with-no-error-message 
+    * http://stackoverflow.com/questions/17859653/nginx-not-running-with-no-error-message
