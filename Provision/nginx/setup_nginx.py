@@ -5,7 +5,10 @@ import os
 # Constants
 NGINX = {
     "defualt_file": "/etc/nginx/sites-enabled/default",
+    "new_file_name": "/etc/nginx/sites-available/flask_project",
+    "sim_link": "/etc/nginx/sites-enabled/flask_project",
     "app_config": "/vagrant/Provision/nginx/flask_project",
+    "restart": "/etc/init.d/nginx restart",
     "testing": False
 }
 
@@ -15,17 +18,21 @@ def create_cmds(config):
     This function creates the commands needed for the
     ngnix setup.
     """
-    cmd1 = "rm /etc/nginx/sites-enabled/default"
+    cmd1 = (
+        "echo $(cat {}) > {}"
+    ).format(config["app_config"], config["new_file_name"])
+
     cmd2 = (
-        "echo '$(cat {})' > "
-        "/etc/nginx/sites-available/flask_project"
-    ).format(config["app_config"])
+        "ln -s {0} {1}"
+    ).format(
+        format(
+            config["app_config"],
+            config["sim_link"]
+        )
+    )
+    cmd3 = "{}".format(config["restart"])
 
-    cmd3 = ("ln -s /etc/nginx/sites-available/flask_project "
-            "/etc/nginx/sites-enabled/flask_project")
-    cmd4 = "/etc/init.d/nginx restart"
-
-    results = [cmd1, cmd2, cmd3, cmd4]
+    results = [cmd1, cmd2, cmd3]
     return results
 
 
@@ -40,6 +47,11 @@ def setup_nginx(config):
 
 def main(config):
     if os.path.exists(config["defualt_file"]):
+        print("Deleting {}".format(config["defualt_file"]))
+        subprocess.call("rm {}".format(config["defualt_file"]))
+
+    if os.path.exists(config["new_file_name"]):
+        print("Starting the Nginx setup process")
         setup_nginx(config)
         print("The setup process has finished")
 
