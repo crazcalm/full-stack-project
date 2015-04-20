@@ -25,10 +25,8 @@ def create_cmds(config):
     cmd2 = (
         "ln -s {0} {1}"
     ).format(
-        format(
-            config["app_config"],
-            config["sim_link"]
-        )
+        config["app_config"],
+        config["sim_link"]
     )
     cmd3 = "{}".format(config["restart"])
 
@@ -50,7 +48,7 @@ def main(config):
         print("Deleting {}".format(config["defualt_file"]))
         subprocess.call("rm {}".format(config["defualt_file"]))
 
-    if os.path.exists(config["new_file_name"]):
+    if not os.path.exists(config["new_file_name"]):
         print("Starting the Nginx setup process")
         setup_nginx(config)
         print("The setup process has finished")
