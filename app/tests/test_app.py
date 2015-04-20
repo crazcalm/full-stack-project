@@ -10,8 +10,9 @@ from app import app
 
 class Testing(unittest.TestCase):
     def setUp(self):
-        self.app = app
-        self.app.config["TESTING"] = True
+        app.testing = True
+        #self.app = app
+        self.app = app.app.test_client(self)
 
     def tearDown(self):
         pass
