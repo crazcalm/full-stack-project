@@ -46,7 +46,11 @@ def setup_nginx(config):
 def main(config):
     if os.path.exists(config["defualt_file"]):
         print("Deleting {}".format(config["defualt_file"]))
-        subprocess.call("rm {}".format(config["defualt_file"]))
+
+        if config["testing"]:
+            pass
+        else:
+            subprocess.call("rm {}".format(config["defualt_file"]))
 
     if not os.path.exists(config["new_file_name"]):
         print("Starting the Nginx setup process")
