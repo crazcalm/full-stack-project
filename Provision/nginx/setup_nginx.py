@@ -4,7 +4,7 @@ import os
 
 # Constants
 NGINX = {
-    "defualt_file": "/etc/nginx/sites-enabled/default",
+    "defualt_file": "/etc/nginx/sites-enabled/default*",
     "new_file_name": "/etc/nginx/sites-available/flask_project",
     "sim_link": "/etc/nginx/sites-enabled/flask_project",
     "app_config": "/vagrant/Provision/nginx/flask_project",
