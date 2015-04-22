@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "dev", primary: true do |dev|
     # Select a box
-    dev.vm.box = "ubuntu/trusty32"
+    dev.vm.box = "ubuntu/trusty64"
 
     # Port forwarding
     dev.vm.network "forwarded_port", guest:80, host:8888, auto_correct: true

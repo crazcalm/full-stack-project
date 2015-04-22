@@ -18,6 +18,7 @@ I would like to try my hand at creating a professional piece of work.
 
 ##Helpful blog posts!
 * https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/
+* https://nextdime.wordpress.com/2014/07/03/how-to-set-up-python-development-environment-ubuntu-14-04/
 
 ##Stack Overflow FTW
 * Nginx
