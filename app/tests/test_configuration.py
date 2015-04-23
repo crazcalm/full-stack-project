@@ -31,11 +31,13 @@ class TestBaseConfig(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_basic_option(self):
-        pass
+    def basics_attrs(self):
+        return ["SECRET_KEY", "DEBUG", "TESTING"]
 
-    def testing(self):
-        self.assertEqual(2, 1 + 1, "Testing")
+    def test_basic_option(self):
+        self.assertIsNotNone(self.config.TESTING)
+        self.assertIsNotNone(self.config.DEBUG)
+        self.assertIsNotNone(self.config.SECRET_KEY)
 
 
 class TestDevelopmentConfig(TestBaseConfig):
