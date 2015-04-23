@@ -1,5 +1,4 @@
 import subprocess
-import os
 
 
 # constants
@@ -13,18 +12,6 @@ INSTRUCTIONS = {
     "install_ez_setup": "python /vagrant/Provision/python_env/ez_setup.py",
     "install_pip": "easy_install pip"
 }
-
-
-def check_if_installed():
-    result = True
-
-    check = subprocess.call("workon", shell=True)
-
-    if check == 127:
-        result = False
-
-    print(check, result, type(check))
-    return result
 
 
 def setup_virtualenv(config):
@@ -43,7 +30,10 @@ def setup_virtualenv(config):
 
         # Add code to bashrc file
         input("pause/n/n")
-        print("echo -e $(cat {}) >> {}".format(config["bashrc_code"],config["bashrc_location"]))
+        print("echo -e $(cat {}) >> {}".format(
+            config["bashrc_code"],
+            config["bashrc_location"])
+        )
         subprocess.call(
             "echo $(cat {}) >> {}".format(
                 config["bashrc_code"],
@@ -52,12 +42,9 @@ def setup_virtualenv(config):
             shell=True
         )
 
-        # Enable Virtualenv
-        subprocess.call(config["enable"], shell=True)
-
 
 def main(config):
-    if check_if_installed():
+    if config["check"]:
         print("Virtualenv has already been setup.")
 
     else:
