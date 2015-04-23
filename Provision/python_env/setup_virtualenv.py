@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 
 # constants
@@ -44,7 +45,7 @@ def setup_virtualenv(config):
 
 
 def main(config):
-    if config["check"]:
+    if os.path.exists(config["check"]):
         print("Virtualenv has already been setup.")
 
     else:
