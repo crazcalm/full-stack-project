@@ -39,3 +39,6 @@ python3 -m pip install -r /vagrant/app/requirements.txt
 
 # Setting up nginx
 python3 /vagrant/Provision/nginx/setup_nginx.py
+
+# Setting up virtualenv
+python3 /vagrant/Provision/python_env/setup_virtualenv.py

@@ -1,0 +1,4 @@
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then\n
+    \texport WORKON_HOME=$HOME/.virtualenvs\n
+    \tsource /usr/local/bin/virtualenvwrapper.sh\n
+fi
