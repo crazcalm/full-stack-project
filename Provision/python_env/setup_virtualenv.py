@@ -52,6 +52,8 @@ def main(config):
         print("Started the virtualenv setup process.")
         setup_virtualenv(config)
         print("The Virtualenv setup has been completed!")
+        print("To complete install run")
+        print("\n\nsource ~/.bashrc")
 
 
 if __name__ == '__main__':

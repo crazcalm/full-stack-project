@@ -9,6 +9,9 @@ I would like to try my hand at creating a professional piece of work.
 * Run App
     * python3 run.py -h (Command line interface)
 
+* Setup Virtualenv
+    * python3 Provision/python_env/setup_virtualenv.py
+
 * Run Tests
     * (From the app directory run) python3 -m unittest discover -v tests/
 
@@ -21,8 +24,11 @@ I would like to try my hand at creating a professional piece of work.
 * https://nextdime.wordpress.com/2014/07/03/how-to-set-up-python-development-environment-ubuntu-14-04/
 
 ##Stack Overflow FTW
-* Nginx
+* Nginx:
     * http://stackoverflow.com/questions/17859653/nginx-not-running-with-no-error-message
+
+* Cannot call source command from python subprocess module:
+    * http://stackoverflow.com/questions/7040592/calling-the-source-command-from-subprocess-popen
 
 ##Cool stuff
 * pyenv?
