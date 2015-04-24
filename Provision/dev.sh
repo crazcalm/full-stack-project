@@ -34,7 +34,7 @@ apt-get install -y sl
 apt-get install -y tree
 
 # App requirments.txt installs
-python3 -m pip install -r /vagrant/app/requirements.txt
+# python3 -m pip install -r /vagrant/app/requirements.txt
 
 
 # Setting up nginx

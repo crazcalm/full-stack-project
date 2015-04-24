@@ -35,7 +35,7 @@ class TestApp:
         self.config = TestConfig()
 
 
-class TestRun(unittest.TestCase): # Still need to add the logig for the tests
+class TestRun(unittest.TestCase):  # Still need to add the logig for the tests
     def setUp(self):
         self.func = set_config
         self.test_object = TestApp()
