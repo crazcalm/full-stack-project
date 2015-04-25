@@ -31,22 +31,10 @@ def setup_virtualenv(config):
         subprocess.call(config["pip"], shell=True)
 
         # Add code to bashrc file
-        input("pause/n/n")
-        print("echo -e $(cat {}) >> {}".format(
-            config["bashrc_code"],
-            config["bashrc_location"])
-        )
         subprocess.call(
             "echo $(cat {}) >> {}".format(
                 config["bashrc_code"],
                 config["bashrc_location"]
-            ),
-            shell=True
-        )
-
-        subprocess.call(
-            "bash {}".format(
-                config["bash_script"]
             ),
             shell=True
         )
@@ -60,8 +48,8 @@ def main(config):
         print("Started the virtualenv setup process.")
         setup_virtualenv(config)
         print("The Virtualenv setup has been completed!")
-        #print("To complete install run")
-        #print("\n\nsource ~/.bashrc")
+        print("To complete install run")
+        print("\n\nsource ~/.bashrc")
 
 
 if __name__ == '__main__':
