@@ -29,12 +29,12 @@ apt-get install -y zip
 
 
 # Personal installs
-apt-get install fish -y
 apt-get install -y sl
 apt-get install -y tree
 
-# App requirments.txt installs
-# python3 -m pip install -r /vagrant/app/requirements.txt
+# Pyenv needed installs
+apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm
 
 
 # Setting up nginx
