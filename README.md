@@ -87,8 +87,6 @@ I would like to try my hand at creating a professional piece of work.
 * pyenv
     * Allows me to install multiple versions of python at once.
     * http://amaral-lab.org/resources/guides/pyenv-tutorial
-* pi-dev?
-    - Proxy server for pypi that will allow me to cache previous install and
-      host my own pip installable files (If needed)
+
 * tox
     - Will run your test in multiple environments.
