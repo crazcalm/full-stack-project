@@ -39,27 +39,35 @@ class TestRun(unittest.TestCase):  # Still need to add the logig for the tests
     def setUp(self):
         self.func = set_config
         self.test_object = TestApp()
-        self.options = {
-            "dev": "dev",
-            "prod": "prod",
-            "stage": "stage"
-        }
+        if not hasattr(sys.stdout, "getvalue"):
+            self.fail("need to run in buffered mode")
 
     def test_default(self):
-        pass
+        self.func(self.test_object)
+        output = sys.stdout.getvalue().strip()
+        self.assertIn("default", output)
 
     def test_dev_option(self):
-        pass
+        self.test_object.dev = True
+        self.func(self.test_object)
+        output = sys.stdout.getvalue().strip()
+        self.assertIn("dev", output)
 
     def test_stage_option(self):
-        pass
+        self.test_object.stage = True
+        self.func(self.test_object)
+        output = sys.stdout.getvalue().strip()
+        self.assertIn("stage", output)
 
     def tearDown(self):
         pass
 
     def testing(self):
-        self.assertEqual(2, 1 + 1, "Testing")
+        print("hello world")
+        output = sys.stdout.getvalue().strip()
+        self.assertIn("world", output)
 
 
 if __name__ == '__main__':
-    unittest.main()
+    assert not hasattr(sys.stdout, "getvalue")
+    unittest.main(module=__name__, buffer=True, exit=False)
