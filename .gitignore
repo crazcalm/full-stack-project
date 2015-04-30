@@ -3,3 +3,4 @@
 app/tests/__pycache__/*
 app/.coverage
 *setuptools-15.1.zip
+.idea
