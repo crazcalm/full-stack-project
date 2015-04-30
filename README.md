@@ -13,7 +13,7 @@ I would like to try my hand at creating a professional piece of work.
     * python3 Provision/python_env/setup_virtualenv.py
 
 * Run Tests
-    * (From the app directory run) python3 -m unittest discover -v -b tests/
+    * (From the app directory run) python -m unittest discover -v -b tests/
 
 * Run Coverage
     * python3 -m coverage report -m --include="./*"
