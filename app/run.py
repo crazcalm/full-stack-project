@@ -13,22 +13,26 @@ STAGING = "Staging configuration"
 PRODUCTION = "Production configuration"
 
 
-def set_config(args):
+def set_config(args, test=False):
     """
     A function to select a config option.
     """
     if args.dev:
         print("dev")
-        app.config.from_object(DevelopmentConfig)
+        if not test:
+            app.config.from_object(DevelopmentConfig)
     elif args.stage:
         print("stage")
-        app.config.from_object(StagingConfig)
+        if not test:
+            app.config.from_object(StagingConfig)
     elif args.prod:
         print("prod")
-        app.config.from_object(ProductionConfig)
+        if not test:
+            app.config.from_object(ProductionConfig)
     else:
         print("The default configuration is DevelopmentConfig.\n")
-        app.config.from_object(DevelopmentConfig)
+        if not test:
+            app.config.from_object(DevelopmentConfig)
     return app
 
 

@@ -43,19 +43,20 @@ class TestRun(unittest.TestCase):  # Still need to add the logig for the tests
             self.fail("need to run in buffered mode")
 
     def test_default(self):
-        self.func(self.test_object)
+        self.func(self.test_object, test=True)
         output = sys.stdout.getvalue().strip()
         self.assertIn("default", output)
 
     def test_dev_option(self):
         self.test_object.dev = True
-        self.func(self.test_object)
+        self.func(self.test_object, test=True)
         output = sys.stdout.getvalue().strip()
         self.assertIn("dev", output)
 
     def test_stage_option(self):
         self.test_object.stage = True
-        self.func(self.test_object)
+        dir(self.test_object)
+        self.func(self.test_object, test=True)
         output = sys.stdout.getvalue().strip()
         self.assertIn("stage", output)
 
@@ -70,4 +71,5 @@ class TestRun(unittest.TestCase):  # Still need to add the logig for the tests
 
 if __name__ == '__main__':
     assert not hasattr(sys.stdout, "getvalue")
+
     unittest.main(module=__name__, buffer=True, exit=False)
