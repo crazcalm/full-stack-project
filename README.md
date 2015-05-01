@@ -7,10 +7,10 @@ I would like to try my hand at creating a professional piece of work.
 
 ##Useful commands
 * Run App
-    * python3 run.py -h (Command line interface)
+    * python run.py -h (Command line interface)
 
 * Setup Virtualenv
-    * python3 Provision/python_env/setup_virtualenv.py
+    * python Provision/python_env/setup_virtualenv.py
 
 * Run Tests
     * (From the app directory run) python -m unittest discover -v -b tests/
