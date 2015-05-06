@@ -147,7 +147,8 @@ section {
 article {
     background-color: blue;
     height: 10%;
-    width: 40%;
+    width: 80%;
+    margin-left: 10%;
 }
 
 footer {
