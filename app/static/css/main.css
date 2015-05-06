@@ -119,14 +119,17 @@ aside {
 
 aside#right_aside {
     background-color: green;
+    float: right;
 }
 
 aside#left_aside {
     background-color: red;
+    float: left;
 }
 
 section {
     background-color: brown;
+    margin: auto;
     height: 70%;
     width: 60%;
 }
