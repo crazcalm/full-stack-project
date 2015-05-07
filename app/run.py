@@ -1,3 +1,8 @@
+"""
+The file is dedicated to the creation of the ... continue later.
+
+"""
+
 import argparse
 from app import app
 from configuration import ProductionConfig
@@ -16,6 +21,10 @@ PRODUCTION = "Production configuration"
 def set_config(args, test=False):
     """
     A function to select a config option.
+
+    :param args: A dict like object that sets the which configuration is used to run the app.
+    :param test: boolean that that is used for testing purposes.
+    :return:
     """
     if args.dev:
         print("dev")
