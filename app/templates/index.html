@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>{% block title %} {% endblock %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +13,9 @@
         <link rel="stylesheet" href={{  url_for("static", filename="css/normalize.css")  }}>
         <link rel="stylesheet" href={{  url_for("static", filename="css/main.css")  }}>
         <script src={{  url_for("static", filename="js/vendor/modernizr-2.8.3.min.js")  }}></script>
+
+        {% block head_links %}
+        {% endblock %}
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -34,6 +37,7 @@
         <div id="main_body">
 
             <aside id="left_aside">
+                {% block left_aside %}
                 <p>Aside 1 content</p>
                 <p>Aside 2 content</p>
                 <p>Text text text</p>
@@ -43,9 +47,11 @@
                 <p>Text text text</p>
                 <p>Aside 2 content</p>
                 <p>Text text text</p>
+                {% endblock %}
             </aside>
 
             <aside id="right_aside">
+                {% block right_aside %}
                 <p>Aside 2 content</p>
                 <p>Text text text</p>
                 <p>Aside 2 content</p>
@@ -56,9 +62,11 @@
                 <p>Text text text</p>
                 <p>Aside 2 content</p>
                 <p>Text text text</p>
+                {% endblock %}
             </aside>
 
             <section>
+                {% block section_content %}
                 <p>Section content</p>
 
                 <article>
@@ -75,11 +83,15 @@ On the third of February last I officially laid before you the extraordinary ann
                     <p>Article 3 content</p>
                     <p>The precautions taken were meager and haphazard enough, as was proved in distressing instance after instance in the progress of the cruel and unmanly business, but a certain degree of restraint was observed. The new policy has swept every restriction aside. Vessels of every kind, whatever their flag, their character, their cargo, their destination, their errand, have been ruthlessly sent to the bottom without warning and without thought of help or mercy for those on board, the vessels of friendly neutrals along with those of belligerents. Even hospital ships and ships carrying relief to the sorely bereaved and stricken people of Belgium, though the latter were provided with safe conduct through the proscribed areas by the German Government itself and were distinguished by unmistakable marks of identity, haven been sunk with the same reckless lack of compassion or of principle.</p>
                 </article>
+                {% endblock %}
+
             </section>
         </div>
         <footer>
+            {% block footer %}
             <p>Footer content</p>
             <p>always with a clear view, at least, of what the heart and conscience of mankind demanded</p>
+            {% endblock %}
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
