@@ -1,3 +1,8 @@
+"""
+This file is dedicated to doing the heavy lifting when setting up
+Ngnix.
+"""
+
 import subprocess
 import os
 
@@ -35,6 +40,12 @@ def create_cmds(config):
 
 
 def setup_nginx(config):
+    """
+    This method evokes all of the shell commands located in the config object.
+
+    :param config: dict
+    :return: None
+    """
     commands = create_cmds(config)
     for index, cmd in enumerate(commands):
         if config["testing"]:
@@ -44,6 +55,12 @@ def setup_nginx(config):
 
 
 def main(config):
+    """
+    This method deals with the logic of setting up nginx
+
+    :param config: dict
+    :return: None
+    """
     if os.path.exists(config["defualt_file"]):
         print("Deleting {}".format(config["defualt_file"]))
 

@@ -1,6 +1,12 @@
+"""
+This file is dedicated to the classes used to configure the application.
+"""
+
+
 class BaseConfig:
     """
-    Base config class
+    Base configuration.
+    The parent of all the other configuration classes.
     """
     SECRET_KEY = ""
     DEBUG = True

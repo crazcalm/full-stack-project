@@ -1,5 +1,9 @@
 """
-The file is dedicated to the creation of the ... continue later.
+Code for commandline interface:
+--------------------------------
+
+The file is dedicated to ensure that the application runs with the
+correct configuration.
 
 """
 
@@ -22,7 +26,8 @@ def set_config(args, test=False):
     """
     A function to select a config option.
 
-    :param args: A dict like object that sets the which configuration is used to run the app.
+    :param args: A dict like object that sets the which configuration is used
+                 to run the app.
     :param test: boolean that that is used for testing purposes.
     :return:
     """

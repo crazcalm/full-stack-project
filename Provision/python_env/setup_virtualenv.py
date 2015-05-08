@@ -1,3 +1,9 @@
+"""
+This file is dedicated to doing the heavy lifting when setting up virtualenv and virtualenvwrapper
+on a new machine.
+"""
+
+
 import subprocess
 import os
 
@@ -17,6 +23,12 @@ INSTRUCTIONS = {
 
 
 def setup_virtualenv(config):
+    """
+    The methos evokes all the needed shell commands.
+
+    :param config: dict
+    :return: None
+    """
     if config["testing"]:
         print("Here is where the setup would be.")
 
@@ -41,6 +53,12 @@ def setup_virtualenv(config):
 
 
 def main(config):
+    """
+    The method controls the logic of this script
+
+    :param config: dict
+    :return: None
+    """
     if os.path.exists(config["check"]):
         print("Virtualenv has already been setup.")
 
