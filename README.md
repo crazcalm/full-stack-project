@@ -18,7 +18,9 @@ I would like to try my hand at creating a professional piece of work.
 * Run Coverage
     * python -m coverage report -m --include="./*"
 
-##Initializing the Environment
+## Initialization of the Project:
+
+### Initializing the Environment
     1. clone git@github.com:crazcalm/full-stack-project.git
 
     2. cd into repo
@@ -43,7 +45,7 @@ I would like to try my hand at creating a professional piece of work.
 
     12. pip install -r requirements.txt
 
-##Initializing the Environment Explained
+### Initializing the Environment Explained
     - Step 3: Runs the provisioning script Privision/dev.sh
 
     - Steps 5: Setting up virtualenv. I automated the steps found in
@@ -66,10 +68,23 @@ I would like to try my hand at creating a professional piece of work.
 
     - Step 9: Installs the required python packages into the virtualenv
 
-## Initializing the Environment Warnings
+### Initializing the Environment Warnings
     Step 5 should only be ran once. If it is ran more than once, then
     multiple line of the same code is appended to your bashrc file. The duplicate
     lines of code need to be removed before the `source ~/.bashrc` will work.
+    
+## Coming back to the project:
+
+### Start your virtualenv
+    run: workon flask_app
+    
+    If you have given the virtualenv for the project a different name, then
+    that name in place of flask_app.
+    
+### Turning on Nginx
+    run: sudo nginx -s reload
+    
+    If that fails, run `sudo nginx -t` to check validity of your configuration.
 
 
 ##Helpful blog posts!
