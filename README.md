@@ -17,6 +17,10 @@ I would like to try my hand at creating a professional piece of work.
 
 * Run Coverage
     * python -m coverage report -m --include="./*"
+    
+* Code Documentation
+    * Run `pydoc -g` in the root directory
+        * Then click on "open browser" and look at the packages in the "." directory
 
 ## Initialization of the Project:
 
