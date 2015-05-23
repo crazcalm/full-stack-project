@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{% block title %} {% endblock %}</title>
+        <title>{% block title %} Base Template {% endblock %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +13,11 @@
         <link rel="stylesheet" href={{  url_for("static", filename="css/normalize.css")  }}>
         <link rel="stylesheet" href={{  url_for("static", filename="css/main.css")  }}>
         <script src={{  url_for("static", filename="js/vendor/modernizr-2.8.3.min.js")  }}></script>
+
+        {% block fonts %}
+        <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+        {% endblock %}
 
         {% block head_links %}
         {% endblock %}
@@ -24,13 +29,12 @@
 
         <!-- Add your site or application content here -->
         <header>
-            <p>Header content</p>
-            <p>I was for a little while unable to believe that such things would in fact be done by any government that hitherto subscribed to the humane practices of civilized nations.</p>
-
-            <nav>
-                <p>Nav bar content</p>
-                <p>International law had its origin in the attempt to set up some law </p>
-            </nav>
+            {% block quote %}
+            <blockquote>
+                <h2 id="quote">"Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it."</h2>
+                <footer><h3 id="quote">-Bruce Lee</h3></footer>
+            </blockquote>
+            {% endblock %}
 
         </header>
 
@@ -67,27 +71,27 @@
 
             <section>
                 {% block section_content %}
-                <p>Section content</p>
+                <h2>Section content</h2>
 
                 <article>
                     <p>Article 1 content</p>
-                    <p>I have called the Congress into extraordinary session because there are serious, very serious, choices of policy to be made, and made immediately, which it was neither right nor constitutionally permissible that I should assume the responsibility of making.
+                    <p id="body">I have called the Congress into extraordinary session because there are serious, very serious, choices of policy to be made, and made immediately, which it was neither right nor constitutionally permissible that I should assume the responsibility of making.
 
 On the third of February last I officially laid before you the extraordinary announcement of the Imperial German Government that on and after the first day of February it was its purpose to put aside all restraints of law or of humanity and use its submarines to sink every vessel that sought to approach either the ports of Great Britain and Ireland or the western coasts of Europe or any of the ports controlled by the enemies of Germany within the Mediterranean.</p>
                 </article>
                 <article>
                     <p>Article 2 content</p>
-                    <p>That had seemed to be the object of the German submarine warfare earlier in the war, but since April of last year the Imperial Government had somewhat restrained the commanders of its undersea craft in conformity with its promise then given to us that passenger boats should not be sunk and that due warning would be given to all other vessels which its submarines might seek to destroy, when no resistance was offered or escape attempted, and care taken that their crews were given at least a fair chance to save their lives in their open boats.</p>
+                    <p id="body">That had seemed to be the object of the German submarine warfare earlier in the war, but since April of last year the Imperial Government had somewhat restrained the commanders of its undersea craft in conformity with its promise then given to us that passenger boats should not be sunk and that due warning would be given to all other vessels which its submarines might seek to destroy, when no resistance was offered or escape attempted, and care taken that their crews were given at least a fair chance to save their lives in their open boats.</p>
                 </article>
                 <article>
                     <p>Article 3 content</p>
-                    <p>The precautions taken were meager and haphazard enough, as was proved in distressing instance after instance in the progress of the cruel and unmanly business, but a certain degree of restraint was observed. The new policy has swept every restriction aside. Vessels of every kind, whatever their flag, their character, their cargo, their destination, their errand, have been ruthlessly sent to the bottom without warning and without thought of help or mercy for those on board, the vessels of friendly neutrals along with those of belligerents. Even hospital ships and ships carrying relief to the sorely bereaved and stricken people of Belgium, though the latter were provided with safe conduct through the proscribed areas by the German Government itself and were distinguished by unmistakable marks of identity, haven been sunk with the same reckless lack of compassion or of principle.</p>
+                    <p id="body">The precautions taken were meager and haphazard enough, as was proved in distressing instance after instance in the progress of the cruel and unmanly business, but a certain degree of restraint was observed. The new policy has swept every restriction aside. Vessels of every kind, whatever their flag, their character, their cargo, their destination, their errand, have been ruthlessly sent to the bottom without warning and without thought of help or mercy for those on board, the vessels of friendly neutrals along with those of belligerents. Even hospital ships and ships carrying relief to the sorely bereaved and stricken people of Belgium, though the latter were provided with safe conduct through the proscribed areas by the German Government itself and were distinguished by unmistakable marks of identity, haven been sunk with the same reckless lack of compassion or of principle.</p>
                 </article>
                 {% endblock %}
 
             </section>
         </div>
-        <footer>
+        <footer id="bottom_of_page">
             {% block footer %}
             <p>Footer content</p>
             <p>always with a clear view, at least, of what the heart and conscience of mankind demanded</p>
