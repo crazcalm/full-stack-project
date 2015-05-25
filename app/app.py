@@ -10,12 +10,12 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/home")
 def hello():
     """
     Renders the hello world test page.
     """
-    return "Hello World"
+    return render_template("home.html")
 
 
 @app.route("/base")
@@ -59,3 +59,13 @@ def chinese():
     :return: html page
     """
     return render_template("chinese.html")
+
+@app.route("/friends")
+def friends():
+    """
+    This method renders the friends page, which will be dedicated
+    to thanking my friends for their help.
+
+    :return: html page
+    """
+    return render_template("friends.html")

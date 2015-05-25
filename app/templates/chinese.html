@@ -1,1 +1,27 @@
 {% extends "base.html" %}
+
+{% block title %}Marcus: Chinese{% endblock%}
+
+{% block head_links %}
+<link rel="stylesheet" href={{  url_for("static", filename="css/chinese.css")  }}>
+{% endblock %}
+
+{% block quote %}
+    <blockquote>
+        <h2 id="quote">"I need to find a quote for this page..."</h2>
+        <footer><h3 id="quote">-Marcus Willock</h3></footer>
+    </blockquote>
+{% endblock %}
+
+{% block right_aside %}
+    <p>Interesting Chinese thing 1</p>
+    <p>Interesting Chinese thing 2</p>
+    <p>Interesting Chinese thing 3</p>
+    <p>Interesting Chinese thing 4</p>
+{% endblock %}
+
+{% block section_content %}
+
+<h2>Chinese content</h2>
+
+{% endblock %}
