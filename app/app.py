@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 @app.route("/home")
-def hello():
+def home():
     """
     Renders the hello world test page.
     """
@@ -19,7 +19,7 @@ def hello():
 
 
 @app.route("/base")
-def home():
+def base():
     """
     This method renders the base tempaplate.
 
