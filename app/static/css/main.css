@@ -117,8 +117,6 @@ header {
     margin-bottom: 1%;
     margin-top: 0px;
     top: 0px;
-    position: fixed;
-    z-index: 5;
 }
 
 h2#quote{
@@ -140,8 +138,6 @@ div#main_body{
     width: 100%;
     overflow: auto;
     opacity: 0.8;
-    margin-top: 20%;
-    z-index: 0;
 }
 
 aside {
