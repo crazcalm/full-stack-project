@@ -4,6 +4,8 @@
 
 {% block head_links %}
 <link rel="stylesheet" href={{  url_for("static", filename="css/home.css")  }}>
+<link rel="stylesheet" href={{  url_for("static", filename="css/resume.css")
+}}>
 {% endblock %}
 
 {% block quote %}
@@ -40,16 +42,167 @@
     </article>
     <article>
         <p id="article_title">Work Experience</p>
-        <p id="body">That had seemed to be the object of the German submarine warfare earlier in the war, but since April of last year the Imperial Government had somewhat restrained the commanders of its undersea craft in conformity with its promise then given to us that passenger boats should not be sunk and that due warning would be given to all other vessels which its submarines might seek to destroy, when no resistance was offered or escape attempted, and care taken that their crews were given at least a fair chance to save their lives in their open boats.</p>
+
+        <p id="body"><strong>Adcade, New York, NY </strong>
+            <strong id="date"> 8/14 - 7/15 </strong></p>
+
+        <ul id="body">
+            <li>Built a utility that parsed the information within Client
+                Service's Google Drive spread sheets and  generated a
+                generic QA testing spreed sheet. The QA testing spreed sheet
+                was pre-filled with the needed the information from the
+                Client Service' spread sheet and the device list needed for
+                testing was dynamically generated. This tool was built in
+                JavaScript and uses the Google App Script API to interacted
+                with Google Drive documents.</li><br/>
+
+            <li>Built a utility that parsed Charles (proxy) XML data for ad
+                ids, session ids, and metrics fired, and saved all data on
+                your local computer in the file structure of
+                ad_id/session_id(s)/metrics_data.txt. This tool was built in
+                Python 3.4 and uses the python standard library.</li><br/>
+
+            <li>Designed and built a desktop application that provided a
+                wrapper around the file structure output of the above tool.
+                This application, which resembled an text editor, had a file
+                structure tree on the left that provided easy access and
+                visibility to the files. The bulk of the application was a
+                text field that allowed for viewing, creating, and modifying
+                of the metrics files. The menu bar contained options that
+                allowed for basic analysis of the metrics files. For
+                example, the “ad summary” option would provided you with a
+                summary of all the metrics that fired in that ad and give
+                the count of how many times each method was fired over the
+                course of all the sessions. Below the main summary, it also
+                provided a similar summary for each session. This
+                application was built in Python 3.4 using Tkinter and other
+                standard library packages.</li><br/>
+
+            <li>Designed, built, and maintained a tool that, through the use
+                of keyboard and mouse automation, allowed for the systematic
+                automation of desktop applications. The mouse automation
+                leveraged image recognition to find the x and y coordinates
+                of the item that needed to be clicked. This tool was built
+                in Python 2.7 and depended on two third party packages by
+                the name of pyautogui and OpenCV. </li>
+        </ul>
+
+        <p id="body"><strong>FuturesMedia, New York, NY </strong>
+            <strong id="date"> 2/14 - 5/14 </strong></p>
+
+        <ul id="body">
+            <li>Designed, built, and maintained their Admin website, which
+                allowed for a user with Admin permissions to create and
+                modify both Accounts and Users. It also allowed for the
+                manipulation of the Account to User Mappings, which is the
+                list of Accounts that a specific User has access to.</li><br/>
+
+            <li>Developed email notification system prototypes. The first
+                email system sent Users a list of all the trades their
+                accounts have been involved in. The second email system sent
+                Users a message every time an account of theirs has been
+                invited to an auction. The third email system provided Users
+                with an overall summary of their activity on the platform,
+                which included the information from the first two emailing
+                systems plus information of the auctions that the User has
+                opened plus a list of all the Accounts that were invited to
+                that auction.</li><br/>
+
+            <li>Assisted in backend development. When refactoring the
+                emailing systems, I wrote classes for each table in the
+                database to add to API clarity and to compartmentalize
+                similar query calls to the database. When building the Admin
+                site, I had to build my own routes, database queries, and
+                add Admin functionality to their already built classes
+                .</li><br/>
+
+            <li>Environment: Ruby, Sinatra, Linux, Apache, PostgreSQL,
+                JavaScript, and Backbone</li>
+        </ul>
     </article>
     <article>
         <p id="article_title">Projects</p>
-        <p id="body">The precautions taken were meager and haphazard enough, as was proved in distressing instance after instance in the progress of the cruel and unmanly business, but a certain degree of restraint was observed. The new policy has swept every restriction aside. Vessels of every kind, whatever their flag, their character, their cargo, their destination, their errand, have been ruthlessly sent to the bottom without warning and without thought of help or mercy for those on board, the vessels of friendly neutrals along with those of belligerents. Even hospital ships and ships carrying relief to the sorely bereaved and stricken people of Belgium, though the latter were provided with safe conduct through the proscribed areas by the German Government itself and were distinguished by unmistakable marks of identity, haven been sunk with the same reckless lack of compassion or of principle.</p>
+
+        <p id="body"><strong>Wifi Finder</strong></p>
+
+        <ul id="body">
+            <li>Developed a NYC wifi finder that returns information about
+                free wifi locations within 0.5 miles of the user's current
+                geolocation.</li><br/>
+
+            <li>The list of free wifi locations can be found on the NYC Open
+                Data website. I wrote a python script to find the
+                geolocations of these wifi locations and created a new CSV
+                file with the added geolocations. The Python script involved
+                creating a API for http://geocoder.us/ via web scraping. I
+                then wrote a Node.js script to read the information from the
+                newly created CSV file and put it into a MongoDB database.
+                Lastly, I used Express.js and the HTML5's Geolocation API to
+                retrieve the user's current geolocation and query the
+                database for free wifi locations within 0.5 miles of that
+                geolocation.</li><br/>
+
+            <li>Code: https://github.com/crazcalm/NYC_Wifi_Locations</li><br/>
+
+            <li>Environment: Python3.4, Node.js, Express.js, MongoDB,
+                JavaScript, Backbone, and Linux.</li>
+        </ul>
+
+        <p id="body"><strong>PEMDAS</strong></p>
+
+        <ul id="body">
+            <li>Built a PEMDAS equation generator and solver in Python 3
+                .4</li><br/>
+
+            <li>In order to complete the project, I also had to build a
+                parentheses checker that checks to the placement, order, and
+                number of the parentheses used in the equation, an infix to
+                postfix expression converter, an algorithm that takes a
+                postfix expression and puts it into a binary tree, and a
+                evaluate function that takes an input of a binary tree and
+                solves the mathematical equation</li><br/>
+
+            <li>Code:
+                https://github.com/crazcalm/Py3.4_exploration/tree/master/DataStructures</li><br/>
+
+            <li>Data Structures Used: Stacks, Queues, and Binary Trees</li>
+        </ul>
+
+        <p id="body"><strong>HackRU 2013</strong></p>
+
+        <ul id="body">
+            <li>Constructed an emailing service that allows sent emails to
+                disappear after the recipient has read them.</li><br/>
+
+            <li>I ported a php application that was demoed at HackRU by a
+                Sendgrid representative to python. This involved converting
+                text to photo images, hosting those photos on my server,
+                sending emails with links to those photos (which were
+                rendered in the user's email client), attaching a web hook
+                to the email and, on notification that the email has been
+                read, call a function that would clear the photo by
+                converting all of the photo's pixels to white. The white
+                photo on the email clients white background gives the
+                illusion that the image has disappeared.</li><br/>
+
+            <li>Code: https://github.com/crazcalm/HackRU2013</li><br/>
+
+            <li>API's Used : Sendgrid</li><br/>
+
+            <li>Environment : Python, Flask, and Windows.</li>
+        </ul>
+
     </article>
 
     <article>
         <p id="article_title">Education</p>
-        <p id="body">The precautions taken were meager and haphazard enough, as was proved in distressing instance after instance in the progress of the cruel and unmanly business, but a certain degree of restraint was observed. The new policy has swept every restriction aside. Vessels of every kind, whatever their flag, their character, their cargo, their destination, their errand, have been ruthlessly sent to the bottom without warning and without thought of help or mercy for those on board, the vessels of friendly neutrals along with those of belligerents. Even hospital ships and ships carrying relief to the sorely bereaved and stricken people of Belgium, though the latter were provided with safe conduct through the proscribed areas by the German Government itself and were distinguished by unmistakable marks of identity, haven been sunk with the same reckless lack of compassion or of principle.</p>
+
+        <p id="body"><strong>Arizona State University</strong></p>
+
+        <ul id="body">
+            <li>BA in Mathematics (with emphasis on Discrete Mathematics)
+                and a minor in Chinese.</li>
+        </ul>
     </article>
 
 {% endblock %}
