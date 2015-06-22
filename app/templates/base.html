@@ -45,16 +45,16 @@
                 <br>
                 <a href="{{ url_for('home') }}"><strong>Home</strong></a><br><br>
                 <a href="{{ url_for('resume') }}"><strong>Resume</strong></a><br><br>
-                <a href="{{ url_for('developer') }}"><strong>Developer</strong></a><br><br>
-                <a href="{{ url_for('chinese') }}"><strong>Chinese</strong></a><br><br>
-                <a href="{{ url_for('friends') }}"><strong>Friends</strong></a><br><br>
+                <!--<a href="{{ url_for('developer') }}"><strong>Developer</strong></a><br><br>-->
+                <!--<a href="{{ url_for('chinese') }}"><strong>Chinese</strong></a><br><br>-->
+                <!--<a href="{{ url_for('friends') }}"><strong>Friends</strong></a><br><br>-->
                 {% endblock %}
             </aside>
 
             <aside id="right_aside">
                 {% block right_aside %}
-                <p><strong>Interesting thing 1</strong></p>
-                <p><strong>Interesting thing 2</strong></p>
+                <a href="http://www.rottentomatoes.com/m/inside_out_2015/"><strong>Favorite Movie</strong></a>
+                <p><a href="http://www.tecmint.com/20-funny-commands-of-linux-or-linux-is-fun-in-terminal/"><strong>Favorite Commands</strong></a></p>
                 <p><strong>Interesting thing 3</strong></p>
                 <p><strong>Interesting thing 4</strong></p>
                 {% endblock %}
