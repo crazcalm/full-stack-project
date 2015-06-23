@@ -10,7 +10,7 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route("/home")
+@app.route("/")
 def home():
     """
     Renders the hello world test page.
@@ -69,3 +69,7 @@ def friends():
     :return: html page
     """
     return render_template("friends.html")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
