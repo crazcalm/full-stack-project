@@ -35,7 +35,3 @@ apt-get install -y tree
 # Pyenv needed installs
 apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm
-
-
-# Setting up nginx
-python3 /vagrant/Provision/nginx/setup_nginx.py

@@ -6,13 +6,14 @@ Ngnix.
 import subprocess
 import os
 
-
 # Constants
+PROJECT_PATH = "/vagrant"
+
 NGINX = {
-    "defualt_file": "/etc/nginx/sites-enabled/default*",
+    "defualt_file": "/etc/nginx/sites-available/default",
     "new_file_name": "/etc/nginx/sites-available/flask_project",
     "sim_link": "/etc/nginx/sites-enabled/flask_project",
-    "app_config": "/vagrant/Provision/nginx/flask_project",
+    "app_config": PROJECT_PATH + "/Provision/nginx/flask_project",
     "restart": "/etc/init.d/nginx restart",
     "testing": False
 }
@@ -62,12 +63,7 @@ def main(config):
     :return: None
     """
     if os.path.exists(config["defualt_file"]):
-        print("Deleting {}".format(config["defualt_file"]))
-
-        if config["testing"]:
-            pass
-        else:
-            subprocess.call("rm {}".format(config["defualt_file"]))
+        print("You need to delete {}".format(config["defualt_file"]))
 
     if not os.path.exists(config["new_file_name"]):
         print("Starting the Nginx setup process")

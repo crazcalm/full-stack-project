@@ -33,44 +33,48 @@ I would like to try my hand at creating a professional piece of work.
 
     4. vagrant ssh
 
-    5. sudo python3 /vagrant/Provision/python_env/setup_virtualenv.py
+    5. python3 /vagrant/Provision/nginx/setup_nginx.py
 
-    6. bash /vagrant/Provision/python_env/setup_pyenv.sh
+    6. sudo python3 /vagrant/Provision/python_env/setup_virtualenv.py
 
-    7. source ~/.bashrc
+    7. bash /vagrant/Provision/python_env/setup_pyenv.sh
 
-    8. pyenv install 3.4.3
+    8. source ~/.bashrc
 
-    9. pyenv global 3.4.3
+    9. pyenv install 3.4.3
 
-    10. cd /vagrant/app
+    10. pyenv global 3.4.3
 
-    11. mkvirtualenv -p python flask_app
+    11. cd /vagrant/app
 
-    12. pip install -r requirements.txt
+    12. mkvirtualenv -p python flask_app
+
+    13. pip install -r requirements.txt
 
 ### Initializing the Environment Explained
     - Step 3: Runs the provisioning script Privision/dev.sh
 
-    - Steps 5: Setting up virtualenv. I automated the steps found in
+    - Step 5: Setting up nginx (if needed)
+
+    - Steps 6: Setting up virtualenv. I automated the steps found in
       https://nextdime.wordpress.com/2014/07/03/how-to-set-up-python-development-environment-ubuntu-14-04/
 
-    - Step 6: Setting up pyenv.
+    - Step 7: Setting up pyenv.
         - http://amaral-lab.org/resources/guides/pyenv-tutorial
 
-    - Step 7: Steps 5 and 6 add code to the bashrc file. This command activates
+    - Step 8: Steps 5 and 6 add code to the bashrc file. This command activates
               that code.
 
-    - Step 8: Installs python 3.4.3
+    - Step 9: Installs python 3.4.3
 
-    - Step 9: Sets python 3.4.3 as the global python
+    - Step 10: Sets python 3.4.3 as the global python
 
-    - Step 11: Creates a virtualenv using python3 called flask_app.
+    - Step 12: Creates a virtualenv using python3 called flask_app.
       - `deactivate` ==> Exits virtualenv
       - `workon` ==> Will list the virtualenvs that you have
       - `work on flask_app` ==> Will activate the flask_app virtualenv
 
-    - Step 9: Installs the required python packages into the virtualenv
+    - Step 13: Installs the required python packages into the virtualenv
 
 ### Initializing the Environment Warnings
     Step 5 should only be ran once. If it is ran more than once, then
@@ -109,6 +113,3 @@ I would like to try my hand at creating a professional piece of work.
 * pyenv
     * Allows me to install multiple versions of python at once.
     * http://amaral-lab.org/resources/guides/pyenv-tutorial
-
-* tox
-    - Will run your test in multiple environments.

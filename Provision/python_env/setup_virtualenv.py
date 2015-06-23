@@ -9,16 +9,18 @@ import os
 
 
 # constants
+PROJECT_PATH = "/vagrant"
+
 INSTRUCTIONS = {
-    "check": "/vagrant/.virtualenvs",
+    "check": "~/.virtualenvs",
     "testing": False,
-    "bashrc_code": "/vagrant/Provision/python_env/bashrc_code",
+    "bashrc_code": PROJECT_PATH + "/Provision/python_env/bashrc_code",
     "pip": "pip install virtualenv virtualenvwrapper",
     "bashrc_location": "~/.bashrc",
     "enable": "source ~/.bashrc",
-    "install_ez_setup": "python /vagrant/Provision/python_env/ez_setup.py",
+    "install_ez_setup": "python " + PROJECT_PATH + "/Provision/python_env/ez_setup.py",
     "install_pip": "easy_install pip",
-    "bash_script": "/vagrant/Provision/python_env/setup_virtualenv.sh"
+    "bash_script": PROJECT_PATH + "/Provision/python_env/setup_virtualenv.sh"
 }
 
 
