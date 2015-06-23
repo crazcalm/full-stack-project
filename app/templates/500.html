@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Marcus: 404{% endblock%}
+{% block title %}Marcus: 500{% endblock%}
 
 {% block head_links %}
 <link rel="stylesheet" href={{  url_for("static", filename="css/home.css")  }}>
@@ -8,13 +8,13 @@
 
 {% block quote %}
     <blockquote>
-        <h2 id="quote">"404 Page not found"</h2>
-        <footer><h3 id="quote">-Internet Gods</h3></footer>
+        <h2 id="quote">"500 Internal Server Error "</h2>
+        <footer><h3 id="quote">- Human Error...</h3></footer>
     </blockquote>
 {% endblock %}
 
 {% block section_content %}
 
-<h2>Sorry</h2>
+<h2>My Bad</h2>
 
 {% endblock %}
