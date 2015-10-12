@@ -17,7 +17,7 @@ I would like to try my hand at creating a professional piece of work.
 
 * Run Coverage
     * python -m coverage report -m --include="./*"
-    
+
 * Code Documentation
     * Run `pydoc -g` in the root directory
         * Then click on "open browser" and look at the packages in the "." directory
@@ -25,7 +25,7 @@ I would like to try my hand at creating a professional piece of work.
 ## Initialization of the Project:
 
 ### Initializing the Environment
-    1. clone git@github.com:crazcalm/full-stack-project.git
+    1. git clone git@github.com:crazcalm/full-stack-project.git
 
     2. cd into repo
 
@@ -80,18 +80,18 @@ I would like to try my hand at creating a professional piece of work.
     Step 5 should only be ran once. If it is ran more than once, then
     multiple line of the same code is appended to your bashrc file. The duplicate
     lines of code need to be removed before the `source ~/.bashrc` will work.
-    
+
 ## Coming back to the project:
 
 ### Start your virtualenv
     run: workon flask_app
-    
+
     If you have given the virtualenv for the project a different name, then
     that name in place of flask_app.
-    
+
 ### Turning on Nginx
     run: sudo nginx -s reload
-    
+
     If that fails, run `sudo nginx -t` to check validity of your configuration.
 
 
