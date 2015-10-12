@@ -5,6 +5,11 @@ I would like to try my hand at creating a professional piece of work.
 ##VM Ports
 * Dev: localhost:8888
 
+##Dependecies
+    python3
+    vagrant
+    nginx
+
 ##Useful commands
 * Run App
     * python run.py -h (Command line interface)
