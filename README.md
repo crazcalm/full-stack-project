@@ -38,7 +38,7 @@ I would like to try my hand at creating a professional piece of work.
 
     4. vagrant ssh
 
-    5. python3 /vagrant/Provision/nginx/setup_nginx.py
+    5. sudo python3 /vagrant/Provision/nginx/setup_nginx.py
 
     6. sudo python3 /vagrant/Provision/python_env/setup_virtualenv.py
 
