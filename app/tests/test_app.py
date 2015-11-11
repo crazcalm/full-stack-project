@@ -20,8 +20,13 @@ class Testing(unittest.TestCase):
         rv = self.app.get("/")
         self.assertEqual(rv.status_code, 200)
 
-    def testing(self):
-        self.assertEqual(2, 1 + 1, "Testing")
+    def test_resume(self):
+        rv = self.app.get("/resume")
+        self.assertEqual(rv.status_code, 200)
+
+    def test_404(self):
+        rv = self.app.get("/404")
+        self.assertEqual(rv.status_code, 404)
 
 
 if __name__ == '__main__':
