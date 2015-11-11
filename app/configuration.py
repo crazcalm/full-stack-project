@@ -1,3 +1,4 @@
+import secret
 """
 This file is dedicated to the classes used to configure the application.
 """
@@ -18,7 +19,7 @@ class ProductionConfig(BaseConfig):
     """
     Production specific config
     """
-    SECRET_KEY = "Need to read key from someplace secret"
+    SECRET_KEY = secret.SECRET
     DEBUG = False
 
 
