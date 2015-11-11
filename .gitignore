@@ -7,3 +7,4 @@ app/.coverage
 .idea
 app/Env/*
 *~
+app/secret*
